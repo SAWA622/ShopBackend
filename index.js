@@ -11,7 +11,6 @@ app.use(express.json());
 
 const productRoute = require("./product");
 const dealRoute = require("./deal");
-const comboRoute = require("./combo");
 
 
 async function connectToMongoDB() {
@@ -32,7 +31,6 @@ connectToMongoDB();
 
 app.use("/products", productRoute);
 app.use("/deals", dealRoute);
-app.use("/combos", comboRoute);
 
 
 app.listen(port, () => {
