@@ -17,7 +17,7 @@ const comboRoute = require("./combo");
 async function connectToMongoDB() {
   try {
     await mongoose.connect(
-      "mongodb+srv://Sawant_anand:Mongo1234@cluster0.vgsic6p.mongodb.net/your-database-name", // Replace with your actual database name
+      "mongodb+srv://Sawant_anand:Mongo1234@cluster0.vgsic6p.mongodb.net/your-database-name",
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
     console.log("Connected to MongoDB");
