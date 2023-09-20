@@ -14,7 +14,7 @@ const Combo = mongoose.model("Combo", ComboSchema);
 router.post("/", async (req, res) => {
   const newCombo = new Combo(req.body);
   try {
-    const savedCombo = await newCombo.save();
+     const savedCombo = await newCombo.save().then((data)=>console.log(data))
     res.status(200).json(savedCombo);
   } catch (err) {
     res.status(500).json(err);
